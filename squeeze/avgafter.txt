@@ -1,0 +1,23 @@
+4   //Average Lab by Esmail Hamidi	
+0   
+0   #include <iostream.h>
+0   #include <fstream.h>
+0   #include <iomanip.h>
+0   
+0   
+0   main()
+0   {	int number, iter=0;
+12   long total=0;
+4   ifstream numb3rs;
+4   numb3rs.open("numbers.txt", ios::in);
+12   while (numb3rs>>number)
+4   {
+8   cout<<setw (4)<<number<<endl; 
+8   iter++;
+8   total+=number;
+4   }
+4   cout<<"\nNumber of Numbers: "<<iter<<endl;
+8   cout<<"Sum of numbers: "<<total<<endl;
+12   cout<<"Avg. Number: "<<total/iter<<endl<<endl;
+4   return 0;
+0   }
